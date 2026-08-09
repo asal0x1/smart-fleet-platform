@@ -1,0 +1,37 @@
+.driver-section {
+  padding-block: clamp(2.5rem, 4vw, 4rem);
+}
+
+.driver-section__layout {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .driver-section__layout {
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+  }
+}
+
+.phone-frame--small {
+  max-width: 260px;
+}
+
+@media (min-width: 768px) {
+  .phone-frame--small {
+    max-width: 240px;
+  }
+}
+
+.driver-section__media {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .driver-section__media {
+    justify-content: flex-end;
+  }
+}

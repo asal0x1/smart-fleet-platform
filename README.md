@@ -4,9 +4,10 @@ Monorepo: Smart Fleet transport va xizmatlar platformasi.
 
 - `backend/` — Django REST API (JWT auth, orders, drivers, requests, WebSocket notifications)
 - `mobile/` — Expo/React Native ilova (haydovchi va mijoz rollari, 6 ta xizmat moduli).
-  Native (Expo Go) va veb ikkalasida ham ishlaydi — veb versiyasi
+  Native (Expo Go) va veb ikkalasida ham ishlaydi.
+- `landing/` — Marketing landing sahifasi (React + Vite),
   [smart-fleet-one-platform.vercel.app](https://smart-fleet-one-platform.vercel.app/)
-  manzilida joylashtirilgan (`expo export --platform web` orqali).
+  manzilida joylashtirilgan.
 
 ## Ishga tushirish
 
@@ -27,4 +28,11 @@ cd mobile
 npm install
 copy .env.example .env   # production uchun EXPO_PUBLIC_API_URL kiriting
 npx expo start
+```
+
+### Landing
+```
+cd landing
+npm install
+npm run dev
 ```

@@ -1,0 +1,122 @@
+.ecosystem__header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.ecosystem__header .section__desc {
+  margin-inline: auto;
+}
+
+.ecosystem__flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.ecosystem__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.ecosystem__node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 16rem;
+  padding: 1rem 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.ecosystem__node-label {
+  font-size: var(--text-base);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+}
+
+.ecosystem__step-desc {
+  margin-top: 0.625rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  max-width: 18rem;
+}
+
+.ecosystem__connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 0.75rem;
+}
+
+.ecosystem__line {
+  width: 2px;
+  height: 1.25rem;
+  background: var(--color-border);
+  animation: pulseLine 2s ease-in-out infinite;
+}
+
+.ecosystem__arrow {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1;
+}
+
+@keyframes pulseLine {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .ecosystem__flow {
+    flex-direction: row;
+    max-width: none;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .ecosystem__step {
+    flex: 1;
+    max-width: 14rem;
+  }
+
+  .ecosystem__connector {
+    flex-direction: row;
+    align-items: center;
+    padding-block: 0;
+    padding-inline: 0.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .ecosystem__line {
+    width: 2rem;
+    height: 2px;
+  }
+
+  .ecosystem__arrow {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecosystem__line {
+    animation: none;
+    opacity: 0.6;
+  }
+}
