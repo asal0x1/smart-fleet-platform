@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Smart Fleet",
+    "slug": "smart_fleet_mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "smartfleet",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Smart Fleet buyurtma va haydovchi joylashuvini ko'rsatish uchun joylashuvingizdan foydalanadi."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0F3550",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Smart Fleet buyurtma va haydovchi joylashuvini ko'rsatish uchun joylashuvingizdan foydalanadi."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Hujjat va profil rasmlarini yuklash uchun galereyaga ruxsat kerak.",
+          "cameraPermission": "Hujjat rasmini kamera orqali olish uchun ruxsat kerak."
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      [
+        "expo-notifications",
+        {
+          "color": "#0F3550"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220,
+          "backgroundColor": "#0F3550"
+        }
+      ]
+    ]
+  }
+}

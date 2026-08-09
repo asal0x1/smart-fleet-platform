@@ -1,0 +1,65 @@
+services:
+  db:
+    image: postgis/postgis:15-3.4
+    environment:
+      POSTGRES_DB: smartfleet
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d smartfleet"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    # Redis ikki narsa uchun MAJBURIY:
+    #  1. WebSocket channel layer (worker'lar o'rtasida xabar almashish)
+    #  2. Throttle hisoblagichlari va Eskiz tokeni
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  web:
+    build: .
+    env_file:
+      - .env
+    # WebSocket kerak bo'lgani uchun gunicorn (WSGI) emas, daphne (ASGI).
+    # Gunicorn'da /ws/ yo'llari umuman ishlamaydi.
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             python manage.py seed_tariffs &&
+             daphne -b 0.0.0.0 -p 8000 config.asgi:application"
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.prod
+      - DB_HOST=db
+      - REDIS_URL=redis://redis:6379/1
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  redis_data:
+  static_volume:
+  media_volume:
