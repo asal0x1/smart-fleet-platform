@@ -3,23 +3,23 @@ import { Car, LayoutGrid, ClipboardList, Zap } from 'lucide-react';
 const cards = [
   {
     icon: Car,
-    title: 'Разные виды транспорта',
-    text: 'Такси, автобусы, персональные водители и специализированная техника.',
+    title: 'Every kind of transport',
+    text: 'Taxis, buses, personal drivers and specialised equipment.',
   },
   {
     icon: LayoutGrid,
-    title: 'Единый интерфейс',
-    text: 'Основные услуги доступны через одну платформу.',
+    title: 'One interface',
+    text: 'All core services available through a single platform.',
   },
   {
     icon: ClipboardList,
-    title: 'Контроль заказов',
-    text: 'История и статусы заказов в одном месте.',
+    title: 'Orders under control',
+    text: 'Order history and statuses in one place.',
   },
   {
     icon: Zap,
-    title: 'Быстрое оформление',
-    text: 'Выбор услуги, параметров и оформление заказа в несколько шагов.',
+    title: 'Fast booking',
+    text: 'Pick a service, set the details and book in a few steps.',
   },
 ];
 
@@ -28,10 +28,10 @@ export default function About() {
     <section id="about" className="section section--alt">
       <div className="container">
         <div className="section__header">
-          <h2 className="section__title">Все транспортные услуги в одном месте</h2>
+          <h2 className="section__title">All transport services in one place</h2>
           <p className="section__desc">
-            SmartFleet объединяет различные транспортные и сервисные направления в
-            единой цифровой платформе.
+            SmartFleet brings different transport and service categories together in
+            a single digital platform.
           </p>
         </div>
 

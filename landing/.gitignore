@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Android APK — git'da emas, GitHub Releases orqali tarqatiladi
+# (86 MB fayl repo tarixini shishirmasligi uchun).
+public/downloads/*.apk

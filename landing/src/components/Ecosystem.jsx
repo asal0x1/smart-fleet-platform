@@ -1,10 +1,10 @@
 import './Ecosystem.css';
 
 const steps = [
-  { id: 'client', label: 'Client', desc: 'Клиент оформляет заказ через приложение' },
-  { id: 'platform', label: 'SmartFleet', desc: 'Платформа обрабатывает и распределяет запрос' },
-  { id: 'driver', label: 'Driver', desc: 'Водитель получает заказ и выполняет поездку' },
-  { id: 'vehicle', label: 'Vehicle', desc: 'Транспортное средство выполняет задачу' },
+  { id: 'client', label: 'Client', desc: 'The client places an order in the app' },
+  { id: 'platform', label: 'SmartFleet', desc: 'The platform processes and routes the request' },
+  { id: 'driver', label: 'Driver', desc: 'The driver accepts the order and completes the trip' },
+  { id: 'vehicle', label: 'Vehicle', desc: 'The vehicle carries out the job' },
 ];
 
 export default function Ecosystem() {
@@ -12,14 +12,14 @@ export default function Ecosystem() {
     <section id="ecosystem" className="section">
       <div className="container container--narrow">
         <div className="ecosystem__header">
-          <h2 className="section__title">Единая экосистема</h2>
+          <h2 className="section__title">A single ecosystem</h2>
           <p className="section__desc">
-            SmartFleet объединяет клиента, водителя и транспортную инфраструктуру в
-            единой системе.
+            SmartFleet connects the client, the driver and the transport
+            infrastructure in one system.
           </p>
         </div>
 
-        <div className="ecosystem__flow" aria-label="Схема экосистемы SmartFleet">
+        <div className="ecosystem__flow" aria-label="SmartFleet ecosystem diagram">
           {steps.map((step, index) => (
             <div key={step.id} className="ecosystem__step">
               <div className="ecosystem__node">

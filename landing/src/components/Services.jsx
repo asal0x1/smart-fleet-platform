@@ -15,10 +15,10 @@ export default function Services() {
     <section id="features" className="section">
       <div className="container">
         <div className="services__header">
-          <h2 className="section__title">Одна платформа — множество возможностей</h2>
+          <h2 className="section__title">One platform, many possibilities</h2>
           <p className="section__desc">
-            Выберите нужную категорию и оформите заказ в несколько шагов — без
-            переключения между разными сервисами.
+            Choose the category you need and place an order in a few steps — without
+            switching between different services.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export default function Services() {
             <div className="phone-frame">
               <img
                 src={screenshots.home}
-                alt="Категории услуг SmartFleet"
+                alt="SmartFleet service categories"
                 className="phone-frame__screen"
                 width={390}
                 height={844}

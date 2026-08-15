@@ -3,10 +3,10 @@ import { screenshots } from '../assets';
 import './DriverSection.css';
 
 const features = [
-  { icon: Car, text: 'Выбор марки автомобиля' },
-  { icon: Briefcase, text: 'Опыт водителя: от 1 до 10+ лет' },
-  { icon: FileText, text: 'Срок договора: от 1 дня до 1 года' },
-  { icon: User, text: 'Контактные данные клиента' },
+  { icon: Car, text: 'Choose the car brand' },
+  { icon: Briefcase, text: 'Driver experience: from 1 to 10+ years' },
+  { icon: FileText, text: 'Contract length: from one day to one year' },
+  { icon: User, text: 'Client contact details' },
 ];
 
 export default function DriverSection() {
@@ -16,7 +16,7 @@ export default function DriverSection() {
         <div className="driver-section__layout">
           <div className="driver-section__content">
             <span className="section__label">Personal Driver</span>
-            <h2 className="section__title">Информация о водителях</h2>
+            <h2 className="section__title">Driver information</h2>
             <ul className="feature-list">
               {features.map(({ icon: Icon, text }) => (
                 <li key={text} className="feature-list__item">
@@ -31,7 +31,7 @@ export default function DriverSection() {
             <div className="phone-frame phone-frame--small">
               <img
                 src={screenshots.driver}
-                alt="Экран заказа персонального водителя"
+                alt="Personal driver booking screen"
                 className="phone-frame__screen"
                 width={390}
                 height={844}

@@ -11,32 +11,32 @@ const services = [
   {
     icon: Car,
     title: 'Taxi & Delivery',
-    text: 'Быстрые поездки и доставка с выбором тарифа и оплаты.',
+    text: 'Fast rides and deliveries with your choice of tariff and payment.',
   },
   {
     icon: UserCircle,
     title: 'Personal Driver',
-    text: 'Персональный водитель на нужный срок с выбором опыта.',
+    text: 'A personal driver for as long as you need, with the experience you choose.',
   },
   {
     icon: Heart,
     title: 'Wedding & Events',
-    text: 'Транспорт для свадеб и торжеств с оформлением.',
+    text: 'Decorated transport for weddings and celebrations.',
   },
   {
     icon: Bus,
     title: 'Bus Booking',
-    text: 'Автобусы для групповых поездок и мероприятий.',
+    text: 'Buses for group trips and events.',
   },
   {
     icon: Construction,
     title: 'Heavy Equipment',
-    text: 'Спецтехника для строительства и дорожных работ.',
+    text: 'Specialised machinery for construction and road works.',
   },
   {
     icon: Gift,
     title: 'Gift & Memorial',
-    text: 'Транспорт для памятных и торжественных событий.',
+    text: 'Transport for memorial and ceremonial occasions.',
   },
 ];
 
@@ -45,9 +45,9 @@ export default function AdditionalFeatures() {
     <section className="section">
       <div className="container">
         <div className="section__header" style={{ marginBottom: '2.5rem' }}>
-          <h2 className="section__title">Дополнительные возможности</h2>
+          <h2 className="section__title">More services</h2>
           <p className="section__desc">
-            Каждое направление доступно через единый интерфейс SmartFleet.
+            Every category is available through the same SmartFleet interface.
           </p>
         </div>
 

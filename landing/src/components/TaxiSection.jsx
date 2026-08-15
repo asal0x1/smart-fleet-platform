@@ -2,10 +2,10 @@ import { MapPin, CreditCard, Clock, Route } from 'lucide-react';
 import { screenshots } from '../assets';
 
 const features = [
-  { icon: Route, text: 'Маршрут от точки А до точки Б' },
-  { icon: MapPin, text: 'Выбор тарифа: Standart, Komfort, Biznes, Premium' },
-  { icon: CreditCard, text: 'Способ оплаты — наличные водителю' },
-  { icon: Clock, text: 'Расчёт времени и расстояния поездки' },
+  { icon: Route, text: 'Route from point A to point B' },
+  { icon: MapPin, text: 'Tariff options: Standart, Komfort, Biznes, Premium' },
+  { icon: CreditCard, text: 'Payment method — cash to the driver' },
+  { icon: Clock, text: 'Estimated trip time and distance' },
 ];
 
 export default function TaxiSection() {
@@ -15,10 +15,10 @@ export default function TaxiSection() {
         <div className="split-section">
           <div className="split-section__content">
             <span className="section__label">Taxi & Delivery</span>
-            <h2 className="section__title">Поездка от точки А до точки Б</h2>
+            <h2 className="section__title">A ride from point A to point B</h2>
             <p className="section__desc">
-              Выберите маршрут, тариф и способ оплаты. SmartFleet помогает оформить
-              поездку быстро и удобно.
+              Choose your route, tariff and payment method. SmartFleet makes booking a
+              ride quick and simple.
             </p>
             <ul className="feature-list">
               {features.map(({ icon: Icon, text }) => (
@@ -34,7 +34,7 @@ export default function TaxiSection() {
             <div className="phone-frame">
               <img
                 src={screenshots.taxi}
-                alt="Экран заказа такси SmartFleet"
+                alt="SmartFleet taxi booking screen"
                 className="phone-frame__screen"
                 width={390}
                 height={844}

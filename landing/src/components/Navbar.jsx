@@ -3,10 +3,10 @@ import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const navLinks = [
-  { label: 'О SmartFleet', href: '#about' },
-  { label: 'Возможности', href: '#features' },
-  { label: 'Услуги', href: '#services' },
-  { label: 'Как работает', href: '#ecosystem' },
+  { label: 'About', href: '#about' },
+  { label: 'Features', href: '#features' },
+  { label: 'Services', href: '#services' },
+  { label: 'How it works', href: '#ecosystem' },
 ];
 
 export default function Navbar() {
@@ -35,7 +35,7 @@ export default function Navbar() {
           SmartFleet
         </a>
 
-        <nav className="navbar__nav" aria-label="Основная навигация">
+        <nav className="navbar__nav" aria-label="Main navigation">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="navbar__link">
               {link.label}
@@ -45,17 +45,17 @@ export default function Navbar() {
 
         <div className="navbar__actions">
           <a href="#cta" className="btn btn--ghost navbar__login">
-            Войти
+            Sign in
           </a>
           <a href="#cta" className="btn btn--primary navbar__cta">
-            Начать работу
+            Download app
           </a>
         </div>
 
         <button
           type="button"
           className="navbar__burger"
-          aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
@@ -72,10 +72,10 @@ export default function Navbar() {
           ))}
           <div className="navbar__mobile-actions">
             <a href="#cta" className="btn btn--secondary" onClick={closeMenu}>
-              Войти
+              Sign in
             </a>
             <a href="#cta" className="btn btn--primary" onClick={closeMenu}>
-              Начать работу
+              Download app
             </a>
           </div>
         </nav>

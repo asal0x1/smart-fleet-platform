@@ -2,10 +2,10 @@ import { CheckCircle, Clock, XCircle, Receipt } from 'lucide-react';
 import { screenshots } from '../assets';
 
 const features = [
-  { icon: Clock, text: 'Статус Pending — заказ в обработке' },
-  { icon: CheckCircle, text: 'Статус Completed — поездка завершена' },
-  { icon: XCircle, text: 'Статус Cancelled — заказ отменён' },
-  { icon: Receipt, text: 'Стоимость, тариф и детали маршрута' },
+  { icon: Clock, text: 'Pending — the order is being processed' },
+  { icon: CheckCircle, text: 'Completed — the trip is finished' },
+  { icon: XCircle, text: 'Cancelled — the order was cancelled' },
+  { icon: Receipt, text: 'Price, tariff and route details' },
 ];
 
 export default function OrdersSection() {
@@ -15,9 +15,9 @@ export default function OrdersSection() {
         <div className="split-section">
           <div className="split-section__content">
             <span className="section__label">Orders</span>
-            <h2 className="section__title">Все заказы под контролем</h2>
+            <h2 className="section__title">Every order under control</h2>
             <p className="section__desc">
-              Отслеживайте историю заказов и их текущий статус в одном интерфейсе.
+              Track your order history and current status from a single interface.
             </p>
             <ul className="feature-list">
               {features.map(({ icon: Icon, text }) => (
@@ -33,7 +33,7 @@ export default function OrdersSection() {
             <div className="phone-frame">
               <img
                 src={screenshots.orders}
-                alt="История заказов SmartFleet"
+                alt="SmartFleet order history"
                 className="phone-frame__screen"
                 width={390}
                 height={844}

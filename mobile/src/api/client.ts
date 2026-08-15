@@ -91,7 +91,7 @@ export function extractErrorMessage(error: unknown, fallback = 'Xatolik yuz berd
     }
     if (data?.message) return data.message;
     if (error.message === 'Network Error') {
-      return 'Serverga ulanib bo\'lmadi. Backend ishga tushganini va telefon bilan bir xil Wi-Fi tarmog\'ida ekanini tekshiring.';
+      return 'Serverga ulanib bo\'lmadi. Internet aloqangizni tekshiring va qaytadan urinib ko\'ring.';
     }
   }
   return fallback;

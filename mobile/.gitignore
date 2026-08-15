@@ -40,3 +40,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Yig'ilgan APK fayllar (EAS'dan yuklab olingan)
+/build

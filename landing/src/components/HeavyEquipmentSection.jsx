@@ -2,10 +2,10 @@ import { Calendar, Construction, MapPin, Plus } from 'lucide-react';
 import { screenshots } from '../assets';
 
 const features = [
-  { icon: Construction, text: 'Категории: земляные работы, перевозка, дорожные работы' },
-  { icon: Plus, text: 'Выбор техники: экскаватор, бульдозер, грейдер' },
-  { icon: MapPin, text: 'Адрес объекта' },
-  { icon: Calendar, text: 'Дата и время начала работ' },
+  { icon: Construction, text: 'Categories: earthworks, hauling, road works' },
+  { icon: Plus, text: 'Equipment: excavator, bulldozer, grader' },
+  { icon: MapPin, text: 'Site address' },
+  { icon: Calendar, text: 'Start date and time of the work' },
 ];
 
 export default function HeavyEquipmentSection() {
@@ -15,13 +15,13 @@ export default function HeavyEquipmentSection() {
         <div className="split-section split-section--reverse">
           <div className="split-section__content">
             <span className="section__label">Heavy Equipment</span>
-            <h2 className="section__title">Не только автомобили</h2>
+            <h2 className="section__title">Not just cars</h2>
             <p className="section__desc" style={{ marginBottom: '0.5rem' }}>
-              <strong>Спецтехника на одной платформе</strong>
+              <strong>Heavy equipment on the same platform</strong>
             </p>
             <p className="section__desc">
-              SmartFleet позволяет работать не только с легковым транспортом, но и с
-              различными категориями специализированной техники.
+              SmartFleet works not only with passenger vehicles, but with a wide range
+              of specialised equipment as well.
             </p>
             <ul className="feature-list">
               {features.map(({ icon: Icon, text }) => (
@@ -37,7 +37,7 @@ export default function HeavyEquipmentSection() {
             <div className="phone-frame">
               <img
                 src={screenshots.heavyEquipment}
-                alt="Экран заказа спецтехники SmartFleet"
+                alt="SmartFleet heavy equipment booking screen"
                 className="phone-frame__screen"
                 width={390}
                 height={844}

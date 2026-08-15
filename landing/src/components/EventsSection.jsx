@@ -2,11 +2,11 @@ import { Car, Calendar, Clock, MapPin, Sparkles } from 'lucide-react';
 import { screenshots } from '../assets';
 
 const features = [
-  { icon: Car, text: 'Выбор марки автомобиля и количества' },
-  { icon: Sparkles, text: 'Тип украшения: цветы, шары, ленты' },
-  { icon: MapPin, text: 'Адрес мероприятия' },
-  { icon: Calendar, text: 'Дата и время проведения' },
-  { icon: Clock, text: 'Продолжительность аренды в часах' },
+  { icon: Car, text: 'Choose the car brand and how many you need' },
+  { icon: Sparkles, text: 'Decoration type: flowers, balloons, ribbons' },
+  { icon: MapPin, text: 'Event address' },
+  { icon: Calendar, text: 'Date and time of the event' },
+  { icon: Clock, text: 'Rental duration in hours' },
 ];
 
 export default function EventsSection() {
@@ -16,10 +16,10 @@ export default function EventsSection() {
         <div className="split-section split-section--reverse">
           <div className="split-section__content">
             <span className="section__label">Wedding & Events</span>
-            <h2 className="section__title">Транспорт для мероприятий</h2>
+            <h2 className="section__title">Transport for special occasions</h2>
             <p className="section__desc">
-              Организуйте транспорт для свадеб, торжеств и других мероприятий в одном
-              интерфейсе.
+              Arrange transport for weddings, celebrations and other events from a
+              single interface.
             </p>
             <ul className="feature-list">
               {features.map(({ icon: Icon, text }) => (
@@ -35,7 +35,7 @@ export default function EventsSection() {
             <div className="phone-frame">
               <img
                 src={screenshots.wedding}
-                alt="Экран заказа транспорта для мероприятий"
+                alt="Event transport booking screen"
                 className="phone-frame__screen"
                 width={390}
                 height={844}

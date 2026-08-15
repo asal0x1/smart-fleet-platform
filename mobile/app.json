@@ -2,18 +2,22 @@
   "expo": {
     "name": "Smart Fleet",
     "slug": "smart_fleet_mobile",
+    "owner": "asal0108",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "scheme": "smartfleet",
     "ios": {
+      "bundleIdentifier": "uz.smartfleet.app",
       "supportsTablet": true,
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Smart Fleet buyurtma va haydovchi joylashuvini ko'rsatish uchun joylashuvingizdan foydalanadi."
       }
     },
     "android": {
+      "package": "uz.smartfleet.app",
+      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#0F3550",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -22,8 +26,8 @@
       },
       "predictiveBackGestureEnabled": false,
       "permissions": [
-        "ACCESS_COARSE_LOCATION",
-        "ACCESS_FINE_LOCATION"
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
       ]
     },
     "web": {
@@ -59,6 +63,11 @@
           "backgroundColor": "#0F3550"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ae9364ab-40fc-4fd2-9301-2b68f0b89d28"
+      }
+    }
   }
 }
